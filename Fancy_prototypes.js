@@ -1,4 +1,4 @@
-// cdn address : https://raw.githubusercontent.com/Plawn/Fancy_prototypes/master/Fancy_prototypes.js
+// cdn address : https://cdn.jsdelivr.net/gh/Plawn/Fancy_prototypes/Fancy_prototypes.js
 
 
 //Object prototypes
