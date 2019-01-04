@@ -30,9 +30,9 @@ Takes a function of one or two arguments.
 
 Example :
 ```javascript
-    String.map((value, key) => console.log(value, key));
-    String.forEach((value, key) => console.log(value, key));
-    String.some((value, key) => console.log(value, key));
+    String.map((character, index) => console.log(value, key));
+    String.forEach((character, index) => console.log(value, key));
+    String.some((character, index) => console.log(value, key));
 ```
 
 Replaces all occurence of **old** by **new_** 
