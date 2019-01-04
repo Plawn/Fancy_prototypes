@@ -3,18 +3,16 @@
 Fancy Prototypes aims to make the life of the JS dev easier by providing nice and simple prototypes for some of the base class of javascript. 
 
 ## How to use
----
 
 Just add the script to your page :
 ```html
-    <script src="https://cdn.jsdelivr.net/gh/Plawn/Fancy_prototypes/Fancy_prototypes.js
-"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Plawn/Fancy_prototypes/Fancy_prototypes.js"></script>
 
 ```
 
 
 ## Prototypes provided :
----
+
 ### For the Object class :
 
 Takes a function of one or two arguments.
