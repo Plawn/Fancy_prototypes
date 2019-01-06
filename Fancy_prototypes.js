@@ -4,47 +4,32 @@
 //Object prototypes
 
 Object.prototype.forEach = function (func) { //func can take value and/or key
-    const t = this;
-    Object.keys(t).forEach(key => func(t[key], key));
+    Object.keys(this).forEach(key => func(this[key], key));
 }
+
 Object.prototype.map = function (func) { //func can take value and/or key
-    const t = this;
-    Object.keys(t).forEach(key => t[key] = func(t[key], key));
-    return t;
+    const r = {};
+    Object.keys(this).forEach(key => r[key] = func(this[key], key));
+    return r;
 }
 
 Object.prototype.some = function (func) { //func can take value and/or key
-    const t = this;
-    Object.keys(t).some(key => func(t[key], key));
+    Object.keys(this).some(key => func(this[key], key));
 }
 
 //String prototypes
 String.prototype.replaceAll = function(old, new_) {
-    const t = this;
-    return t.replace(new RegExp(old, 'g'), new_);
+    return this.replace(new RegExp(old, 'g'), new_);
 };
 
 String.prototype.forEach = function (func) {
-    const t = this;
-    const n = t.length;
-    let i;
-    for (i = 0; i < n; i++) {
-        func(t[i], i);
-    }
+    this.split('').forEach((e, i)=>func(e, i));
 }
 
 String.prototype.map = function (func) {
-    const t = this;
-    let s = '';
-    t.forEach((elem, index) => s += func(elem, index));
-    return s;
+    return this.split('').map((e, i)=>func(e,i)).join('');   
 }
 
 String.prototype.some = function(func){
-    const t = this;
-    const n = t.length;
-    let i;
-    for (i = 0; i < n; i++) {
-        if (func(t[i], i)) return;
-    }
+    this.split('').some((e, i)=>func(e,i));
 }
