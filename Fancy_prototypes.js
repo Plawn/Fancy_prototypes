@@ -18,18 +18,18 @@ Object.prototype.some = function (func) { //func can take value and/or key
 }
 
 //String prototypes
-String.prototype.replaceAll = function(old, new_) {
+String.prototype.replaceAll = function (old, new_) {
     return this.replace(new RegExp(old, 'g'), new_);
 };
 
 String.prototype.forEach = function (func) {
-    this.split('').forEach((e, i)=>func(e, i));
+    this.split('').forEach((e, i) => func(e, i));
 }
 
 String.prototype.map = function (func) {
-    return this.split('').map((e, i)=>func(e,i)).join('');   
+    return this.split('').map((e, i) => func(e, i)).join('');
 }
 
-String.prototype.some = function(func){
-    this.split('').some((e, i)=>func(e,i));
+String.prototype.some = function (func) {
+    this.split('').some((e, i) => func(e, i));
 }
