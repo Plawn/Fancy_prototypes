@@ -5,16 +5,22 @@
 
 Object.prototype.forEach = function (func) { //func can take value and/or key
     Object.keys(this).forEach(key => func(this[key], key));
-}
+};
 
 Object.prototype.map = function (func) { //func can take value and/or key
     const r = {};
     Object.keys(this).forEach(key => r[key] = func(this[key], key));
     return r;
-}
+};
 
 Object.prototype.some = function (func) { //func can take value and/or key
     Object.keys(this).some(key => func(this[key], key));
+};
+
+Object.prototype.filter = function (func) {
+    const t = this;
+    Object.keys(t).forEach(key => { if (!func(key, t[key])) delete t[key]; });
+    return t;
 }
 
 //String prototypes
@@ -24,12 +30,12 @@ String.prototype.replaceAll = function (old, new_) {
 
 String.prototype.forEach = function (func) {
     this.split('').forEach((e, i) => func(e, i));
-}
+};
 
 String.prototype.map = function (func) {
     return this.split('').map((e, i) => func(e, i)).join('');
-}
+};
 
 String.prototype.some = function (func) {
     this.split('').some((e, i) => func(e, i));
-}
+};
